@@ -29,10 +29,6 @@ export default function JoinForm() {
     }
 
     const formData = new FormData(form);
-    const fullName = ['name_first', 'name_father', 'name_grandfather', 'name_family']
-      .map(k => (formData.get(k) || '').trim())
-      .join(' ');
-    formData.set('full_name', fullName);
     formData.set('role', role);
     formData.set('team', role === 'Contributor' ? team : 'Member');
 
@@ -90,24 +86,10 @@ export default function JoinForm() {
 
           <fieldset>
             <legend>Full name</legend>
-            <div className="row c4">
-              <label className="field">
-                First name <span className="req" aria-hidden="true">*</span>
-                <input type="text" name="name_first" autoComplete="given-name" required />
-              </label>
-              <label className="field">
-                Father's name <span className="req" aria-hidden="true">*</span>
-                <input type="text" name="name_father" required />
-              </label>
-              <label className="field">
-                Grandfather's name <span className="req" aria-hidden="true">*</span>
-                <input type="text" name="name_grandfather" required />
-              </label>
-              <label className="field">
-                Family name <span className="req" aria-hidden="true">*</span>
-                <input type="text" name="name_family" autoComplete="family-name" required />
-              </label>
-            </div>
+            <label className="field">
+              Full name <span className="req" aria-hidden="true">*</span>
+              <input type="text" name="full_name" autoComplete="name" required />
+            </label>
           </fieldset>
 
           <fieldset>
@@ -129,7 +111,7 @@ export default function JoinForm() {
             <div className="row c2">
               <label className="field">
                 University <span className="req" aria-hidden="true">*</span>
-                <input type="text" name="university" defaultValue="University of Jordan" required />
+                <input type="text" name="university" value="University of Jordan" readOnly required />
               </label>
               <label className="field">
                 Major <span className="req" aria-hidden="true">*</span>
