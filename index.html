@@ -13,5 +13,30 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+
+    <!-- Netlify form detection (hidden, static HTML for build-time scanning) -->
+    <form name="joinForm" data-netlify="true" data-netlify-honeypot="botcheck" style="display:none" hidden>
+      <input type="hidden" name="form-name" value="joinForm" />
+      <input type="hidden" name="botcheck" />
+      <input type="text" name="name_first" />
+      <input type="text" name="name_father" />
+      <input type="text" name="name_grandfather" />
+      <input type="text" name="name_family" />
+      <input type="tel" name="phone" />
+      <input type="email" name="email" />
+      <input type="text" name="university" />
+      <input type="text" name="major" />
+      <select name="year"><option value=""></option></select>
+      <textarea name="skills"></textarea>
+      <input type="url" name="github" />
+      <input type="url" name="linkedin" />
+      <textarea name="posts"></textarea>
+      <input type="radio" name="role" value="Contributor" />
+      <input type="radio" name="role" value="Member" />
+      <input type="radio" name="team" value="Technical" />
+      <input type="radio" name="team" value="Social Media" />
+      <input type="radio" name="team" value="PR & HR" />
+      <input type="hidden" name="full_name" />
+    </form>
   </body>
 </html>
