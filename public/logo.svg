@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <defs>
+    <radialGradient id="bgGrad" cx="50%" cy="45%" r="50%">
+      <stop offset="0%" stop-color="#e6f7ef"/>
+      <stop offset="60%" stop-color="#e4f4fa"/>
+      <stop offset="100%" stop-color="#eef0f8"/>
+    </radialGradient>
+  </defs>
+  <circle cx="60" cy="60" r="58" fill="url(#bgGrad)"/>
+  <!-- Keyhole shape -->
+  <path d="M60 20 C60 12.2 53.8 6 46 6 C38.2 6 32 12.2 32 20 L32 70 C32 77.8 38.2 84 46 84 C53.8 84 60 77.8 60 70 Z" fill="none" stroke="#2a2a4d" stroke-width="4"/>
+  <circle cx="60" cy="70" r="14" fill="none" stroke="#2a2a4d" stroke-width="4"/>
+  <!-- Penguin inside keyhole -->
+  <g transform="translate(60, 50) scale(0.8)">
+    <!-- Body -->
+    <ellipse cx="0" cy="8" rx="18" ry="22" fill="#2a2a4d"/>
+    <!-- Belly -->
+    <ellipse cx="0" cy="10" rx="10" ry="14" fill="#ffffff"/>
+    <!-- Eyes -->
+    <circle cx="-6" cy="0" r="3" fill="#2a2a4d"/>
+    <circle cx="6" cy="0" r="3" fill="#2a2a4d"/>
+    <!-- Beak -->
+    <path d="M-4 4 Q0 8 4 4 Z" fill="#f39a1e"/>
+    <!-- Flippers -->
+    <ellipse cx="-18" cy="10" rx="4" ry="12" fill="#2a2a4d" transform="rotate(-20 -18 10)"/>
+    <ellipse cx="18" cy="10" rx="4" ry="12" fill="#2a2a4d" transform="rotate(20 18 10)"/>
+    <!-- Feet -->
+    <path d="M-8 28 Q-10 32 -6 32" stroke="#f39a1e" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M8 28 Q10 32 6 32" stroke="#f39a1e" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
+</svg>
